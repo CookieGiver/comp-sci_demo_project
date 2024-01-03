@@ -90,6 +90,7 @@ class Flashcards(tk.Frame):
             self.card.configure(text=self.vocab[self.index + 1][0])
             self.index += 1
             self.state = 0
+            
     def prev_word(self):
          if self.index - 1 >= 0 and self.index - 1 < len(self.vocab):
             self.card.configure(text=self.vocab[self.index - 1][0])

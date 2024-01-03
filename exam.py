@@ -23,22 +23,22 @@ class Exam(tk.Frame):
         self.score = [0, 0] # Score: [correct, total]
 
         self.back_btn = ctk.CTkButton(
-                    master=root, 
-                    text="🢀",
-                    width=40,
-                    height=50,
-                    text_color='white',
-                    fg_color=main_color,
-                    hover_color=hover_color,
-                    border_width=2,
-                    border_color='black',
-                    corner_radius=20,
-                    font=('Lato', 30, 'bold'),
-                    anchor='center',
-                    command=self.go_home)
+            master=root, 
+            text="🢀",
+            width=40,
+            height=50,
+            text_color='white',
+            fg_color=main_color,
+            hover_color=hover_color,
+            border_width=2,
+            border_color='black',
+            corner_radius=20,
+            font=('Lato', 30, 'bold'),
+            anchor='center',
+            command=self.go_home
+            )
         self.back_btn.place(x=50, y=40)
 
-        self.QTypes = [self.writing_q, self.mult_choice_q, self.match_q]
         self.new_q()
 
         self.pack()
@@ -156,7 +156,6 @@ class Exam(tk.Frame):
         )
         self.card_lower_l.grid(row=2, column=0, padx=10, pady=10)
 
-    
     def mult_choice_check_q(self, word_choice, card):
         if word_choice == self.word:
             card.configure(fg_color="#66de8a")
